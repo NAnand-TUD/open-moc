@@ -1,0 +1,15 @@
+# 'Comments'
+
+SPECS_FILE stator_specs.out #stator_specs.out #NO #stator_specs.out
+FILE_NAME stator
+TE_thk = 0.02 
+RAD_FAC = 8
+TE_coords = [1.0694851228464406,-0.5211528192488006]
+Throat = 0.002900077668468214
+MIN_NELEM = 8.5e4
+scale = 10
+BL_IN FAC # LEN
+BL_FAC = 0.15
+BL_H = 2.e-3
+
+

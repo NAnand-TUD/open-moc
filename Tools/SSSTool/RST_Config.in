@@ -1,0 +1,35 @@
+# 'Comments'
+
+TOOL_TYPE = SSS
+
+STATOR_KIND = AXIAL
+
+### General Parameters ###
+nBlades = 18
+AxialPitch = 0.1
+flowAngle = 80.4 #80.4 
+radiusOut = 0.11908 #0.1229568761 #0.1822701094 #0.1200343657 #0.11908
+outFileMoc = Nozzle_coords_M25.out #Nozzle_coords_M12.out
+kernelRadiusRatio = 10.0
+#connectRadius = 2.5
+ActualRin = 0.1685
+ActualRout = 0.11908
+RealRout = 0.11
+ScaleNoz = 8
+TEminT = 0.0005
+ScaleMax = 50
+#Throat = 2e-3
+#AreaRatio = 25
+
+Mode Simulation_Loop # Design_Chain # Visualization
+
+OptiDiv Throat #Throat, Scale or no
+
+ScaleMesh = 10
+nPointsScale = 2
+CoordsName stator_coords.out
+UMG2Name stator
+
+plotName show #Stator.png
+SpecsName stator_specs.out
+nBldPlt = 3:

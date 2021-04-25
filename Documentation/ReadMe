@@ -1,0 +1,27 @@
+-> python version 3.0
+
+-> Required packages:
+	matplotlib
+	math
+	sympy
+        os
+        sys
+	nympy
+	pdb
+	copy
+
+-> Always run the ./MAIN.py
+
+-> Parameters can be controled in the file 'MOC_Config.in'
+
+-> Output Files: Nozzle_coords.out & Nozzle_prop.out
+
+-> Update: 
+      8/1/2016 : Reflection Zone added to the code 
+      4/2/2016 : Real Gas Implemented (Sauer's - Real pending)
+      7/2/2016 : Real Gas Revised (Sauer's - Real Pending)
+      11/2/2016: Real Gas with Table + removal of black matrix (Sauer's - Real Pending)
+      12/2/2016: Same as 11thFeb - Small Improvements
+      15/2/2016: New Class Var
+      18/2/2016: OOPs Program
+      29/5/2016: Sauer-Real, RefProp Improved, progressBar, StatorOptim, Commented

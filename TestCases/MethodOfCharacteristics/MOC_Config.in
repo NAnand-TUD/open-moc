@@ -1,0 +1,79 @@
+# 'Comments'
+
+TOOL_TYPE = MOC
+
+# PLANAR||delta=0 or AXISSYM||delta=1
+
+NozzleType PLANAR
+
+# 'PRFT' = Perfect Gas, EoS = Equation of State, EoS_TAB = Using Table, CoolProp = CoolProp
+
+GAS_EQU CoolProp
+
+FLDNAME = Toluene
+
+# Calculate throat properties (ITER) or use file name
+
+THROAT_PROP = ITER
+
+#EoS: Solve - Numerical ise: NULL
+VrhoGuess = 0.03
+TGuess = 580
+PGuess = 20e5
+
+# RealGas Table #'Create' 'Calc'
+Table_Oper Create
+LLim = 200
+ULim = 700
+dV = 0.2
+
+
+# REAL GAS PROP - SI Units (Toluene) (ref: Wiki)
+Tc = 591.79	#591.79		# K
+Pc = 2.09e6	#4.109e6		# Pa
+Vc = 0.000316		# m^3/mol
+M = 0.09214	#0.09214		# kg/mol
+Ho = 676.019		# J/Kg
+so = 0.9
+gamma = 1.055		# cnst
+To = 580		# K
+Po = 20.4e5		# Pa
+R = 8.314		# mol/Kg/K
+Ho = 676.019		# J/Kg
+so = 0.9
+gamma = 1.055		# cnst
+To = 580		# K
+Po = 20.4e5		# Pa
+
+# Input: Throat Design
+
+rho_t 10
+y_t 1
+rho_d 10
+n 10
+
+# Accuracy: Accuracy Required
+
+#Corr_n 1000
+tolerance_v 1e-6	# 1e-3 -> Best result
+tolerance_x 1e-6       # 1e-3 -> Best result
+#Corr_n_inv 100
+dtau 0.5		# 1.0 -> Best Result
+#Reflex:
+
+n_ref = 40
+# Design Output: Output Mach Number
+
+Noz_Design_Mach 1.3
+
+# PlotResults: Plotting Results
+
+PlotResults = YES # YES/NO
+File_Name_Plot moc.png
+
+# WriteData: Writing Variables
+
+File_Name_NProp Nozzle_prop.out
+VAR x y u v M rho SoS T P
+
+File_Name_NCods Nozzle_coords_M12.out
