@@ -119,7 +119,7 @@ Nozzle_Wall.append(IVP[0])
 
 #---------------------------------------------------------------------------------------------#
 # 3. START: IVP 2 KERNAL
-tau = np.linspace(0,90,90/float(IN['dtau'])+1)# 3.a Wall angles at the expansion regime (max = 90)
+tau = np.linspace(0,90,int(90/float(IN['dtau'])+1))# 3.a Wall angles at the expansion regime (max = 90)
 tau = tau [1:-1:1]
 wall = Points()
 print('\n\n\t***** Developing Kernal Region *****\n\n')

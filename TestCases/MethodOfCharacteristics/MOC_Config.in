@@ -58,7 +58,7 @@ n 10
 tolerance_v 1e-6	# 1e-3 -> Best result
 tolerance_x 1e-6       # 1e-3 -> Best result
 #Corr_n_inv 100
-dtau 0.5		# 1.0 -> Best Result
+dtau 0.1		# 1.0 -> Best Result
 #Reflex:
 
 n_ref = 40
